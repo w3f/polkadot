@@ -27,8 +27,10 @@ RUN mv /usr/share/ca* /tmp && \
 	rm -rf /usr/share/*  && \
 	mv /tmp/ca-certificates /usr/share/ && \
 	rm -rf /usr/lib/python* && \
-	mkdir -p /root/.local/share/polkadot && \
-	ln -s /root/.local/share/polkadot /data
+	useradd -m -u 1000 -U -s /bin/sh -d /polkadot polkadot && \
+	mkdir -p /polkadot/.local/share/polkadot && \
+	chown -R polkadot:polkadot /polkadot/.local && \
+	ln -s /polkadot/.local/share/polkadot /data
 
 # Shrinking
 RUN rm -rf /usr/lib/python* && \
