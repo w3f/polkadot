@@ -36,6 +36,10 @@ pub fn poc_3_testnet_config() -> Result<ChainSpec, String> {
 	ChainSpec::from_embedded(include_bytes!("../res/alexander.json"))
 }
 
+pub fn kusama_config() -> Result<ChainSpec, String> {
+	ChainSpec::from_embedded(include_bytes!("../res/kusama.json"))
+}
+
 fn staging_testnet_config_genesis() -> GenesisConfig {
 	// subkey inspect "$SECRET"
 	let endowed_accounts = vec![
