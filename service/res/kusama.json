@@ -2179,7 +2179,34 @@
       "sudo": {
         "key": "5GH9nfWc9Z2SX8iSmF3iegeMFoHMyjFdhNf7G5R1Euxcojr3"
       },
-      "grandpa": null,
+      "grandpa": {
+        "authorities": [
+          [
+            "5DBX7khaonKbGj2cffV6yzpndcBAyXJnLF5j2QpB6mpyq9hh",
+            1
+          ],
+          [
+            "5DY6QLwxempFvJ7fvA6xWhthgErwnEaWHcSd385rbDA6qUPY",
+            1
+          ],
+          [
+            "5GtMfznJnWpZR1nxLjo8a3VqdbfVGhQygQFK4jbjL82gmT5o",
+            1
+          ],
+          [
+            "5GFzUWeubNFRz2wc3YyPFAi4EvjuPpfga9rrqnNsM6squEdT",
+            1
+          ],
+          [
+            "5EAViDGBwAUJMTyMtNa2xRmpcei4XHLTbPLJQenyWjnqgb7Q",
+            1
+          ],
+          [
+            "5Hb4dYYcm8mpGGNWtBRNMknBZoH1J8J3iu2hJ519MnY4vjL8",
+            1
+          ]
+        ]
+      },
       "parachains": {
         "parachains": [],
         "phdata": null
