@@ -365,8 +365,8 @@ impl parachains::Trait for Runtime {
 }
 
 parameter_types!{
-	pub const LeasePeriod: BlockNumber = 100_000;
-	pub const EndingPeriod: BlockNumber = 1000;
+	pub const LeasePeriod: BlockNumber = 100;
+	pub const EndingPeriod: BlockNumber = 100;
 }
 
 impl slots::Trait for Runtime {
