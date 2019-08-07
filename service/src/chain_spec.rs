@@ -114,8 +114,8 @@ fn staging_testnet_config_genesis() -> GenesisConfig {
 		}),
 		elections: Some(ElectionsConfig {
 			members: vec![],
-			presentation_duration: 1 * DAYS,
-			term_duration: 28 * DAYS,
+			presentation_duration: 20,
+			term_duration: 20,
 			desired_seats: 0,
 		}),
 		sudo: Some(SudoConfig {
@@ -246,9 +246,9 @@ pub fn testnet_genesis(
 				.filter(|&endowed| initial_authorities.iter()
 					.find(|&(_, controller, _)| controller == endowed)
 					.is_none()
-				).map(|a| (a.clone(), 1000000)).collect(),
+				).map(|a| (a.clone(), 20)).collect(),
 			presentation_duration: 10,
-			term_duration: 1000000,
+			term_duration: 20,
 			desired_seats: desired_seats,
 		}),
 		parachains: Some(Default::default()),
