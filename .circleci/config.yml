@@ -1,0 +1,17 @@
+version: 2
+jobs:
+  buildImage:
+    docker:
+      - image: web3f/ci-commons:v1.2.0
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          command: |
+            /scripts/build-image.sh web3f/polkadot -f docker/Dockerfile .
+
+workflows:
+  version: 2
+  test_and_deploy:
+    jobs:
+      - buildImage
