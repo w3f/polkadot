@@ -51,10 +51,6 @@ fn session_keys(
 	SessionKeys { babe, grandpa, im_online, parachain_validator }
 }
 
-pub fn kusama_config() -> Result<ChainSpec, String> {
-	ChainSpec::from_embedded(include_bytes!("../res/kusama.json"))
-}
-
 fn staging_testnet_config_genesis() -> GenesisConfig {
 	// subkey inspect "$SECRET"
 	let endowed_accounts = vec![
